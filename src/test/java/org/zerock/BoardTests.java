@@ -128,12 +128,12 @@ public class BoardTests {
 	@Test
 	public void testInserts() {
 		
-		IntStream.range(0, 100).forEach(i -> {
+		IntStream.range(100, 300).forEach(i -> {
 			
 			BoardVO vo = new BoardVO();
-			vo.setTitle("title" + i);
-			vo.setContent("content"+i);
-			vo.setWriter("writer"+(i % 10));
+			vo.setTitle("lestitle" + i);
+			vo.setContent("contentatomsk"+i);
+			vo.setWriter("userles"+(i % 10));
 			boardRepository.save(vo);
 			
 			
