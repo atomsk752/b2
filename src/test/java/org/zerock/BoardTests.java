@@ -28,6 +28,15 @@ public class BoardTests {
 	private BoardRepository boardRepository;
 	
 	@Test
+	public void testList() {
+		
+		Page<BoardVO> result
+			= boardRepository.getList(PageRequest.of(0, 10));
+		
+		log.info(""+result);
+	}
+	
+	@Test
 	public void testQ1() {
 		Pageable pageable = PageRequest.of(0, 10, Sort.Direction.DESC,"bno");
 		
